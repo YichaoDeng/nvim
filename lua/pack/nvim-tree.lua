@@ -78,24 +78,8 @@ function M.setup()
     nvim_tree.setup({
         on_attach = on_attach,
         sort_by = "case_sensitive",
-        actions = {
-            open_file = {
-                window_picker = { enable = false }
-            }
-        },
         view = {
-            float = {
-                enable = true,
-                open_win_config = function()
-                    local columns = G.o.columns
-                    local lines = G.o.lines
-                    local width = math.max(math.floor(columns * 0.5), 50)
-                    local height = math.max(math.floor(lines * 0.5), 20)
-                    local left = math.ceil((columns - width) * 0.5)
-                    local top = math.ceil((lines - height) * 0.5 - 2)
-                    return { relative = "editor", border = "rounded", width = width, height = height, row = top, col = left }
-                end,
-            }
+            width = 30,
         },
         update_focused_file = {
             enable = true,
