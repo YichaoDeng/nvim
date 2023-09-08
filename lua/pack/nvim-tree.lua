@@ -78,9 +78,11 @@ function M.setup()
     nvim_tree.setup({
         on_attach = on_attach,
         sort_by = "case_sensitive",
+        --[[
         view = {
             width = 30,
         },
+        ]]
         update_focused_file = {
             enable = true,
             update_root = false,
